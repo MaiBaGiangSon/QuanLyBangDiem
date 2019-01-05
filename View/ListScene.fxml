@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListSceneController">
+   <children>
+      <SplitPane dividerPositions="0.9949832775919732" layoutX="57.0" layoutY="21.0" prefHeight="334.0" prefWidth="600.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="ListTable" layoutX="-39.0" layoutY="14.0" prefHeight="398.0" prefWidth="195.0" styleClass="background" stylesheets="application/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="NoColumn" prefWidth="92.0" text="STT" />
+                      <TableColumn fx:id="NameColumn" prefWidth="58.0" text="Name" />
+                        <TableColumn fx:id="AveColumn" prefWidth="75.0" text="Average" />
+                        <TableColumn fx:id="NickColumn" prefWidth="75.0" text="Nick name" />
+                        <TableColumn fx:id="RangeColumn" prefWidth="75.0" text="Range" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="0.0" styleClass="background" stylesheets="application/application.css">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="120.0" layoutX="284.0" layoutY="4.0">
+                     <image>
+                        <Image url="music/hoamai1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <MenuBar layoutY="-1.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Logout" text="Logout" />
+              <MenuItem fx:id="handleExitItem" mnemonicParsing="false" onAction="#Close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Contact">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="btEdit" layoutX="525.0" layoutY="362.0" mnemonicParsing="false" onAction="#Edit" text="Sửa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="468.0" layoutY="362.0" mnemonicParsing="false" onAction="#Xoa" text="Xóa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="18.0" layoutY="360.0" mnemonicParsing="false" onAction="#Logout" text="Logout">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="87.0" layoutY="360.0" mnemonicParsing="false" onAction="#Close" text="Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btRe" layoutX="137.0" layoutY="360.0" mnemonicParsing="false" onAction="#Refresh" text="Làm mới">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
